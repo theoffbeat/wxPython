@@ -1,0 +1,166 @@
+
+I like the dedication
+"To every Jane and Joe Programmer, chained to their computer, burning the midnight oil, striving to make a dream come true"
+
+PART I - INTRODUCTION TO WXPYTHON
+Chapter01
+Welcome to wxPython
+
+#bare-minimum code to create a wxPython Window
+class MyApp(wx.App):
+    def OnInit(self):
+        self.frame = wx.Frame(None, title = 'Window')
+        self.panel = MyFrame(self.frame)
+        self.panel.Show()
+        return True
+if __name__ == '__main__':
+    app = MyApp(False)
+    app.MainLoop()
+
+OnInit() called my application's MainLoop() when the program is stated and provides an entry point to start the main logic
+Frame: the main window of your application, top level window
+Windows: objects such as buttons or text boxes
+
+The example code illustrates the bare-minimum code
+The 5 steps for every wxPython program:
+1.) Import the necessary wxPython package
+2.) Subclass the wxPython application class
+3.) Define an application initialization method
+4.) Create an application class instance
+5.) Enter the application's main event loop
+
+Step-by-Step of the above 5 steps
+
+1.) Import the necessary wxPython package
+import wx #this must be imported first
+from wx import xrc #any other wxPython packages,
+from wx import html # just to be safe
+this order only applies to wxPython modules
+
+2.) Subclass the wxPython application class
+every wxPython program must have:
+1 application object: instance of wx.App or a subclass you define where you declare OnInit(), OnInit() gets called by wx.App parent class when application starts
+at least 1 frame object
+
+3.) Define an application initialization method
+if your subclass creates a custom __init__() then the parent method, wx.App.__init__(), is automatically invoked on object creation
+
+4.) Create an application class instance
+app = App() #App() is the wx.App subclass
+app.MainLoop() #invoked the MainLoop()
+
+Foundation of wxPython Program
+1.) application object
+2.) top-level window object
+
+Application Object
+Manages/starts the main event loop
+THe main event loop responds to windowing system events and dispatches them to the right event handler.
+Every wxPython application needs exactly 1 application object, must be an instance of class wx.App, or custom class of wx.App
+Creating a wx.App subclass
+1.) Define the subclass
+2.) Write OnInit() method within the subclass. If this returns False exits immediately, so it should return True
+3.) Create an instance of the class in the main section of your program
+4.) Call the MainLoop() of the application instance. This method transfers program control to wxPython
+
+Top-level window object
+Manages the most important data, controls and presents them to the user
+
+
+
+Chapter02
+Giving your wxPython program a solid foundation
+
+wxPython program foundation, 2 required objects
+1.) application object: manages the main event loop, sits on top of the top-level window object
+2.) top-level window object: generally manages the most important data and controls and presents them to the user
+
+Application object
+there can only be one
+the event loop responds to windowing system events and dispatches them to the appropriate event handler, cannot create any wxPython graphical objects until after your program has instantiated an application object
+
+should subclass wx.App for uses, like a database connection
+need to perform 2 steps
+1.) define the subclass
+2.) write an OnInit() method within the subclass definition
+3.) create an instance of the class in the main section of your program
+4.) call the MainLoop() method of the application instance, this method transfer program control to wxPython
+
+class MyApp(wx.App):
+    def OnInit(self):
+        # initialization for your custom class is typically managed here, not in the Class __init__()
+
+        # will also call these methods too
+        frame = MyFrame('Hello World', (50, 60), (450, 340))
+        frame.Show()
+
+if your class needs a __init__() need to call it this way
+wx.App.__init__(self)
+
+can call wx.App subclass in main, however it is not recommended to do so
+
+Application object lifecycle
+1.) Application object created
+    1.) automatically calls OnInit(), window objects can be created
+2.) MainLoop() is called, wxPython events are now being handled
+    1.) events are now processed
+3.) Application object destroyed
+    1.) happens when all top-level windows are closed
+
+Top-level window object
+
+Output
+
+Python programs can direct ouput:
+1.) standard stream: sys.stdout
+2.) standard error stream: sys.stderr
+
+can decide to have wxPython take control of the standard streams and redirect output to a window, this is default on Windows, on Unix more likely to be on a console and therefore wxPython does not control the stream by default
+
+Redirecting output
+text sent to streams is redirected to a separate wxPython frame
+
+if __name__ == '__main__':
+    # outputs all content into the console
+    app = App(redirect=False)
+
+    # write the output to a file
+    app = App(redirect=True, filename='output')
+
+Shutting down a wxPython Application
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

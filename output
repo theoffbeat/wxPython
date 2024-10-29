@@ -1,0 +1,12 @@
+OnInit
+Frame __init__
+<_io.TextIOWrapper name='output' mode='a' encoding='cp1252'> A pretend error message
+Before MainLoop
+OnExit
+TypeError: invalid result from App.OnExit(), an integer is required (got type NoneType)
+OnInit
+Frame __init__
+<_io.TextIOWrapper name='output' mode='a' encoding='cp1252'> A pretend error message
+Before MainLoop
+OnExit
+TypeError: invalid result from App.OnExit(), an integer is required (got type NoneType)
