@@ -1,0 +1,1253 @@
+
+
+MDN Learning Area GitHub
+https://github.com/mdn/learning-area/
+
+
+
+SVG Tutorial
+https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Getting_Started
+
+Canvas API
+https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API
+
+WebGL tutorial
+https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial
+
+WebRTC API
+https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API
+
+
+
+
+
+
+
+COMPLETE BEGINNERS START HERE!
+
+Getting started with the web
+
+MDN Curriculum
+https://developer.mozilla.org/en-US/curriculum/
+
+
+Installing basic software
+How do you set up a local testing server?
+https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server
+
+Browser for visually impaired people
+https://lynx.browser.org
+
+
+What will your website look like?
+
+Google Fonts is not GDPR
+Bunny Fonts is GDPR
+https://fonts.bunny.net/about
+
+
+Dealing with files
+
+Google Search Central
+https://developers.google.com/search/docs/crawling-indexing/url-structure
+
+Project Structure
+my-project
+    index.html
+    /images
+    /styles
+    /scripts
+
+
+HTML basics
+
+this nicely steps through what each part of the webpage is
+https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics
+
+
+CSS basics
+
+
+JavaScript basics
+
+Good resource to learn JavaScript
+https://learnjavascript.online
+
+
+Publishing your website
+
+Free hosting and domains
+https://neocities.org
+
+https://sites.google.com/u/0/new?pli=1&authuser=0
+
+https://www.blogger.com/about/?bpli=1
+
+https://wordpress.com
+
+GitHub Pages
+https://pages.github.com
+
+Google App Engine
+https://cloud.google.com/appengine/
+
+Web-based IDEs
+JSFiddle
+https://jsfiddle.net
+
+Glitch
+https://glitch.com
+
+JS Bin
+https://jsbin.com/?html,output
+
+CodePen
+https://codepen.io
+
+
+How the web works
+
+
+
+
+
+STRUCTURING THE WEB WITH HTML
+
+Introduction to HTML
+
+What's in the head? Metadata in HTML
+
+HTML text fundamentals
+
+Creating hyperlinks
+
+Advanced text formatting
+
+Document and website structure
+
+Debugging HTML
+
+Marking up a letter
+
+Structuring a page of content
+
+Use HTML to solve common problems
+https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto
+
+
+
+MULTIMEDIA AND EMBEDDING
+
+Images in HTML
+
+Video and audio content
+
+From object to iframe — other embedding technologies
+
+Adding vector graphics to the web
+
+Responsive images
+
+Mozilla splash page
+
+
+
+HTML TABLES
+
+HTML table basics
+
+HTML table advanced features and accessibility
+
+Structuring planet data
+
+
+
+
+
+CSS — STYLING THE WEB
+
+CSS FIRST STEPS
+
+What is CSS?
+
+Getting started with CSS
+
+How CSS is structured
+
+Styling a biography page
+
+
+
+CSS BUILDING BLOCKS
+
+CSS selectors
+
+Type, class, and ID selectors
+
+Attribute selectors
+select your HTML elements with specific attributes, seems very useful
+https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors
+
+Pseudo-classes and pseudo-elements
+A pseudo-class is a selector that selects elements that are in a specific state, e.g. they are the first element of their type, or they are being hovered over by the mouse pointer.
+
+Combinators
+
+Cascade, specificity, and inheritance
+
+Specificity
+https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#specificity_2
+
+The amount of specificity a selector has is measured using three different values (or components), which can be thought of as ID, CLASS, and ELEMENT columns in the hundreds, tens, and ones place:
+
+Identifiers: Score one in this column for each ID selector contained inside the overall selector.
+Classes: Score one in this column for each class selector, attribute selector, or pseudo-class contained inside the overall selector.
+Elements: Score one in this column for each element selector or pseudo-element contained inside the overall selector.
+
+So the scoring system becomes: 1-4-2, or 142 versus 1-5-1 or 151 the second one wins
+Identifiers (100s)
+Classes (10s)
+Elements (1s)
+or Identifiers-Classes-Elements
+
+Scoping proximity
+https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#scoping_proximity
+@scope(.class-name) {
+    p {
+        font: something-crazy
+    }
+}
+
+Cascade layers
+https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_layers
+
+provides an excellent description of how styles are applied and the order in which they are applied
+(come back to this from time to time)
+
+The box model
+
+If a box has an outer display type of block, then:
+1.) The box will break onto a new line.
+2.) The width and height properties are respected.
+3.) Padding, margin and border will cause other elements to be pushed away from the box.
+4.) If width is not specified, the box will extend in the inline direction to fill the space available in its container. In most cases, the box will become as wide as its container, filling up 100% of the space available
+
+If a box has an outer display type of inline, then:
+1.) The box will not break onto a new line.
+2.) The width and height properties will not apply.
+3.) Top and bottom padding, margins, and borders will apply but will not cause other inline boxes to move away from the box.
+4.) Left and right padding, margins, and borders will apply and will cause other inline boxes to move away from the box.
+
+Worth checking this out
+Block and inline layout in normal flow
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow
+
+Parts of a box (outer to inner)
+1.) Margin box
+2.) Border box
+3.) Padding box
+4.) Content box
+
+The standard CSS box model
+good description of the strangeness of the standard CSS box model
+https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model#the_standard_css_box_model
+
+Backgrounds and borders
+
+Handling different text directions
+writing modes control the direction that text flows in
+
+Overflowing content
+
+CSS values and units
+
+em unit means "my parent element's font-size"
+rem unit means "The root element's font-size"
+
+opacity you make the element and everything inside it opaque
+RGB with an alpha parameter colors only makes the color you are specifying opaque.
+
+Sizing items in CSS
+
+Images, media, and form elements
+
+Styling tables
+
+Advanced styling effects
+
+Debugging CSS
+
+Organizing your CSS
+Object Oriented CSS (OOCSS)
+https://github.com/stubbornella/oocss/wiki
+https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook/Media_objects
+
+Fundamental CSS comprehension
+
+Creating fancy letterheaded paper
+
+A cool-looking box
+
+
+
+STYLING TEXT
+
+CSS styling text
+
+Fundamental text and font styling
+CSS properties used to style text generally fall into two categories
+1.) Font styles: Properties that affect a text's font, e.g., which font gets applied, its size, and whether it's bold, italic, etc.
+2.) Text layout styles: Properties that affect the spacing and other layout features of the text, allowing manipulation of, for example, the space between lines and letters, and how the text is aligned within the content box.
+
+Styling lists
+
+Styling links
+
+Web fonts
+
+Free font distributors
+Font Squirrel
+https://www.fontsquirrel.com/
+
+dafont
+https://www.dafont.com/
+
+Everything Fonts
+https://everythingfonts.com/
+
+Typesetting a community school homepage
+
+
+
+CSS LAYOUT
+
+CSS layout
+
+Introduction to CSS layout
+
+layouts available in CSS
+    Normal flow
+    The display property
+    Flexbox
+    Grid
+    Floats
+    Positioning
+    Table layout
+    Multiple-column layout
+
+Normal Flow
+margin collapsing: if two vertically adjacent elements both have a margin set on them and their margins touch, the larger of the two margins remains and the smaller one disappears, only relevant in the vertical direction.
+
+Flexbox
+https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox
+
+arranges rows and columns
+items flex (expand) to fill additional space or shrink to fit into smaller spaces
+
+flex container: parent
+flex items: children
+
+terms:
+main axis: the axis running in the direction the flex items are laid out in
+main start: the start of the axis
+main end: end of the axis
+main size: the length from the main-start edge to the main-end edge
+
+cross size: axis running perpendicular to the direction the flex items are laid out in
+cross start: the start of the axis
+cross end: end of the axis
+cross size: the length from the cross-start edge to the cross-end edge
+
+flex-drection: the direction the main axis runs, the direction the flexbox children are laid out in, by default this is set to row
+
+flex-flow shorthand
+this goes on the parent
+flex-direction: row;
+flex-wrap: wrap;
+flex-flow: row wrap;
+
+Flexible sizing of flex items
+flex: 1;
+each element will take the same value as each other
+
+flex: 1 200px;
+each item is:
+1.) given 200px of the available space
+2.) afterwards the rest of the available space will be share according to the proportion units
+
+Flex Shorthand
+flex is actually a shorthand of:
+1.) flex-grow: how much to grow an item
+2.) flex-shrink: comes into play when the flex items are overflowing their container, how much an item will shrink in order to prevent overflow
+3.) flex-basis: minimum size value
+
+Alignment
+this is actually put within the parent container
+align-items: center;                flex items are positioned at the center of the cross-axis, top-to-bottom
+justify-content: space-around;      flex items are space evenly along the main-axis, left-to-right,
+
+align-items
+property controls where the flex items sit on the cross axis
+default is normal that acts as a stretch
+can override behavior for individual flex items by applying the align-self property to them
+
+justify-content
+controls where the flex items sit on the main axis
+default is normal, behaves as start, makes all the items sit at the start of the main axis
+
+space-around: distributes all the items evenly along the main axis, with space left at either end
+space-between: doesn't leave any space at either end
+
+justify-items property is ignored in flexbox layouts
+
+Ordering flex items
+order: 1;
+by default all flex items have an order value of 0
+higher values appear later, lower values appear earlier
+
+Nested flex boxes
+the same rules apply, but to the parent items
+
+
+
+Grids
+https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids
+
+gutters: the gaps between columns and rows
+
+display: grid;
+
+grid-template-columns: 1fr 1fr 1fr;
+displays grids as 1 fraction item
+distributes available space
+
+create gaps between tracks, we use the properties:
+1.) column-gap for gaps between columns
+2.) row-gap for gaps between rows
+3.) gap as a shorthand for both
+
+can repeat your columns
+grid-template-columns: repeat(3, 1fr);
+
+to give rows or columns a size
+grid-auto-rows: 200px;
+grid-auto-columns: 200px;
+
+minmax(100px, auto);
+sets a min and max size
+
+fit as many columns as possible
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+Line-based placement
+begin placing items of the grid at specific spots
+grid-column-start
+grid-column-end
+grid-row-start
+grid-row-end
+
+grid-column shorthand for grid-column-start and grid-column-end
+grid-row shorthand for grid-row-start and grid-row-end
+
+grid-column: 2 / 4
+grid-row: 3; //this places the item
+
+Can use grid-template-areas
+//best illustrated with an example
+
+.container {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "sidebar content"
+    "footer footer";
+  grid-template-columns: 1fr 3fr;
+  gap: 20px;
+}
+
+header {
+  grid-area: header;
+}
+
+article {
+  grid-area: content;
+}
+
+aside {
+  grid-area: sidebar;
+}
+
+footer {
+  grid-area: footer;
+}
+
+The rules for grid-template-areas are as follows:
+1.) You need to have every cell of the grid filled.
+2.) To span across two cells, repeat the name.
+3.) To leave a cell empty, use a . (period).
+4.) Areas must be rectangular — for example, you can't have an L-shaped area.
+5.) Areas can't be repeated in different locations.
+
+subgrid to inherit the parent grid's column tracks
+
+
+Floats
+
+Block formatting context (BFC) is to combine the floating to the normal flow of the document
+display: flow-root;
+
+Positioning
+positioning allows you to take elements out of normal document flow and make them behave differently
+
+Static positioning is the default that every element gets, put the element in its normal position in the document flow
+
+Relative positioning: once the element has taken its place in the normal flow, you can modify its final position
+use top, bottom, left, and right to move the item
+
+Absolute positioning
+
+Fixed positioning
+fixes the element to a direct portion of the screen
+
+Sticky positioning
+position: sticky;
+a hybird between relative and fixed position, allows a positioned element to act like it's relatively positioned until it's scrolled to a certain threshold, after which it becomes fixed
+
+Scrolling index
+create a scrolling index page where different headings stick to the top of the page they reach it
+
+//example
+
+<h1>Sticky positioning</h1>
+
+<dl>
+  <dt>A</dt>
+  <dd>Apple</dd>
+  <dd>Ant</dd>
+  ...
+</dl>
+
+dt {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  margin: 1em 0;
+}
+
+Multiple-column layout
+
+.container {
+  column-count: 3;
+  column-width: 200px;
+}
+
+Responsive design
+
+Media queries
+@media screen and (min-width: 800px) {
+    .container {
+        ...
+    }
+}
+
+breakpoints: the points at which a media query is introduced and the layout is changed
+
+need this because often times browser lie about their width
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+
+
+Beginner's guide to media queries
+
+example of a media query
+@media media-type and (media-feature-rule) {
+  /* CSS rules go here */
+}
+It consists of:
+1.) A media type, which tells the browser what kind of media this code is for (e.g. print, or screen).
+2.) A media expression, which is a rule, or test that must be passed for the contained CSS to be applied.
+3.) A set of CSS rules that will be applied if the test passes and the media type is correct.
+
+Media types
+1.) all
+2.) print
+3.) screen
+
+for example a print media query
+@media print {
+  body {
+    font-size: 12pt;
+  }
+}
+
+Media Query Guides
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#syntax
+
+Legacy layout methods
+https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods
+
+Supporting older browsers
+
+Fundamental layout comprehension
+
+
+
+JAVASCRIPT — DYNAMIC CLIENT-SIDE SCRIPTING
+
+JAVASCRIPT FIRST STEPS
+
+function createParagraph() {
+    const para = document.createElement('p');
+    para.textContent = 'You clicked the button';
+    document.body.appendChild(para)
+}
+
+const buttons = document.querySelectorAll('button');
+for(const button of buttons) {
+    button.addEventListener('click', createParagraph);
+}
+
+<script type="module">, the code is treated as a module and the browser waits for all HTML to be processed before executing JavaScript modules
+
+What is JavaScript?
+
+A first splash into JavaScript
+
+What went wrong? Troubleshooting JavaScript
+
+Storing the information you need — Variables
+
+Basic math in JavaScript — numbers and operators
+
+Handling text — strings in JavaScript
+
+Useful string methods
+
+Arrays
+
+Silly story generator
+
+
+
+JAVASCRIPT BUILDING BLOCKS
+
+Making decisions in your code — conditionals
+
+Looping code
+
+Looping through a collection
+for...of loop
+const cats = ["Leopard", "Serval", "Jaguar", "Tiger", "Caracal", "Lion"];
+
+for (const cat of cats) {
+  console.log(cat);
+}
+
+map()
+function toUpper(string) {
+  return string.toUpperCase();
+}
+
+const cats = ["Leopard", "Serval", "Jaguar", "Tiger", "Caracal", "Lion"];
+
+const upperCats = cats.map(toUpper);
+
+console.log(upperCats);
+// [ "LEOPARD", "SERVAL", "JAGUAR", "TIGER", "CARACAL", "LION" ]
+
+standard for loop
+for (initializer; condition; final-expression) {
+  // code to run
+}
+
+Functions — reusable blocks of code
+
+Build your own function
+
+another good example of DOM manipulation
+
+const panel = document.createElement("div");
+panel.setAttribute("class", "msgBox");
+body.appendChild(panel);
+
+const msg = document.createElement("p");
+msg.textContent = "This is a message box";
+panel.appendChild(msg);
+
+const closeBtn = document.createElement("button");
+closeBtn.textContent = "x";
+panel.appendChild(closeBtn);
+
+closeBtn.addEventListener("click", () =>
+    panel.parentNode.removeChild(panel),
+);
+
+"function invocation operator". You only use them when you want to run the function immediately in the current scope
+
+Function return values
+
+Introduction to events
+Web events are not part of the core JavaScript language — they are defined as part of the APIs built into the browser.
+
+Event bubbling
+getting the name of the element you clicked on
+function handleClick(e) {
+    // notice the e.currentTarget.tagName
+    output.textContent += `You clicked on a ${e.currentTarget.tagName} element\n`;
+}
+
+bubbling event: bubbles up, from the innermost element that the event occurred on
+
+body
+    div
+        button
+if we add a click listener to it, the event will go in the order of:
+1.) button
+2.) div
+3.) body
+
+The Event object has a function available on it called stopPropagation() which, when called inside an event handler, prevents the event from bubbling up to any other elements.
+
+element.addEventListener('click', (event) => {
+    event.stopPropagation();
+    // other code
+});
+
+Event capture
+like event bubbling but the order is reversed, the event fires first on the least nested element, and then on successively more nested elements, until the target is reached
+
+Event delegation: set the event listener on the parents, and the events that happen on them bubble up to their parent instead of having to place it on every child element
+
+event.currentTarget: refers to the element which this event handler has been attached, different for event handlers that are attached to different elements in the hierarchy
+event.target: refers to the element on which the event was initially fired, remains the same as the event bubbles up
+
+
+
+INTRODUCING JAVASCRIPT OBJECTS
+
+JavaScript object basics
+
+Object prototypes
+
+prototype: every object in JavaScript has this built-in property
+
+creating prototypes:
+1.) Object.create(myPrototype);
+2.) constructor
+
+Object-oriented programming
+
+Classes in JavaScript
+https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Classes_in_JavaScript
+
+Working with JSON
+https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON
+
+deserialization: converting a string to a native object
+serialization: converting a native objet to string so it can be transmitted
+
+https://jsonlint.com
+
+Converting between objects and text
+parse(): Accepts a JSON string as a parameter, and returns the corresponding JavaScript object.
+stringify(): Accepts an object as a parameter, and returns the equivalent JSON string.
+
+Object building practice
+
+Adding features to our bouncing balls demo
+
+
+
+ASYNCHRONOUS JAVASCRIPT
+
+Introducing asynchronous JavaScript
+
+How to use promises
+Promises: at the time the promise is returned to the caller, the operation often isn't finished, but the promise object provides methods to handle the eventual success/failure of the operation
+
+Either:
+1.) return the data
+2.) use a simple arrow function that will implicitly return
+
+1.) return the data
+
+const fetchPromise = fetch("https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",);
+fetchPromise
+.then((response) => {
+    console.log(`Received response: ${response.status}`)
+    return response;
+})
+.then((response) => {
+        return response.json();
+})
+.then((data) => {
+    console.log(data[0].name)
+});
+
+
+2.) use a simple arrow function that will implicitly return
+
+const fetchPromise = fetch("https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json");
+fetchPromise
+.then((response) =>
+        response.json()
+)
+.then((data) =>
+    console.log(data[0].name)
+);
+
+
+Will show the fuller example
+
+const fetchPromise = fetch("https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json");
+
+fetchPromise
+.then((response) => {
+    if(!response.ok) {
+        throw new Error(`HTTP error: ${response.status}`);
+    }
+    // console.log(`Received response: ${response.status}`)
+    return response.json();
+})
+.then((data) => {
+    console.log(data[0].name)
+})
+.catch((error) => {
+    console.error(`Could not get products: ${error}`);
+});
+
+
+then(): the handler passed here, is called when the asynchronous operation succeeds
+catch(): the handler passed here, is called when the asynchronous operation fail
+
+
+async and await
+
+// stand alone
+async function fetchProducts() {
+    try {
+        const response = await fetch(
+            "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
+        );
+
+        if (!response.ok) {
+            throw new Error(`HTTP error: ${response.status}`);
+        }
+        const data = await response.json();
+        console.log(data[0].name);
+    } catch (error) {
+        console.error(`Could not get products: ${error}`);
+    }
+}
+
+fetchProducts();
+
+
+
+// async and await, with a promise function()
+
+async function fetchProducts() {
+const response = await fetch(
+    "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
+);
+
+if (!response.ok) {
+    throw new Error(`HTTP error: ${response.status}`);
+}
+const data = await response.json();
+return data;
+}
+
+const promise = fetchProducts();
+promise
+.then((data) => {
+    console.log(data[0].name);
+})
+.catch((error) => {
+    console.error(`Could not get products: ${error}`);
+});
+
+await and async must be part of a function, unless in a JavaScript module
+
+
+How to implement a promise-based API
+https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API
+
+
+Introducing workers
+
+workers allow you to run some tasks in a separate thread of execution
+
+Workers cannot access the DOM
+
+3 different sorts of workers:
+1.) Dedicated workers
+2.) Shared workers
+3.) Service workers
+
+Sequencing animations
+
+
+
+CLIENT-SIDE WEB APIS
+
+Introduction to web APIs
+
+Manipulating documents
+
+Fetching data from the server
+
+fetch() uses AJAX concepts
+
+example fetch()
+
+fetch(url)
+.then((response) => {
+    if (!response.ok) {
+        throw new Error(`HTTP error: ${response.status}`);
+    }
+    return response.text();
+})
+.then((text) => {
+    poemDisplay.textContent = text;
+})
+.catch((error) => {
+    poemDisplay.textContent = `Could not fetch verse: ${error}`;
+});
+
+
+
+example AJAX with JSON
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Fetch starting point</title>
+
+    <style>
+        html,
+        pre {
+            font-family: sans-serif;
+        }
+
+        body {
+            width: 500px;
+            margin: 0 auto;
+            background-color: #ccc;
+        }
+
+        pre {
+            line-height: 1.5;
+            letter-spacing: 0.05rem;
+            padding: 1rem;
+            background-color: white;
+        }
+
+        label {
+            width: 200px;
+            margin-right: 33px;
+        }
+
+        select {
+            width: 350px;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Fetch starting point</h1>
+
+    <form>
+        <label for="verse-choose">Choose a verse</label>
+        <select id="verse-choose" name="verse-choose">
+            <option>Verse 1</option>
+            <option>Verse 2</option>
+            <option>Verse 3</option>
+            <option>Verse 4</option>
+        </select>
+    </form>
+
+    <h2>The Conqueror Worm, <em>Edgar Allen Poe, 1843</em></h2>
+
+    <pre></pre>
+
+    <script>
+        const verseChoose = document.querySelector("select");
+        const poemDisplay = document.querySelector("pre");
+
+        verseChoose.addEventListener('change', () => {
+            const verse = verseChoose.value;
+            updateDisplay(verse);
+        });
+
+
+        function updateDisplay(verse) {
+            verse = verse.replace(" ", "0").toLowerCase();
+            console.log(verse);
+            const url = `${verse}.txt`;
+
+            fetch(url)
+                .then((response) => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error: ${response.status}`);
+                    }
+                    return response.text();
+                })
+                .then((text) => {
+                    poemDisplay.textContent = text;
+                })
+                .catch((error) => {
+                    poemDisplay.textContent = `Could not fetch verse: ${error}`;
+                });
+        }
+
+        updateDisplay("Verse 1");
+        verseChoose.value = "Verse 1";
+
+    </script>
+</body>
+
+</html>
+
+
+older method()
+XMLHttpRequest
+https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest
+
+
+Fecth API
+https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
+
+
+Third-party APIs
+
+Drawing graphics
+https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics
+
+If you want to draw anything more complex than a rectangle, you need to draw a path
+
+WebGL uses OpenGL and allows us to work with the GPU, but need a 3rd party library
+Three.js
+PlayCanvas
+Babylon.js
+
+Video and Audio APIs
+
+Client-side storage
+
+Cookies
+are outdated, but can reference them here: https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies
+
+Web Storage API
+sessionStorage: persists the data for the duration of when the broswer is open
+localStorage: persists the data even after the browser is closed
+
+each domain has a different storage engine
+
+IndexedDB API
+https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB
+
+Cache API
+https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage#offline_asset_storage
+
+
+
+
+WEB FORM BUILDING BLOCKS
+
+Your first form
+
+some guides for UI/UX
+https://www.uxmatters.com/mt/archives/2012/05/7-basic-best-practices-for-buttons.php
+https://www.uxmatters.com/mt/archives/2010/03/pagination-in-web-forms-evaluating-the-effectiveness-of-web-forms.php
+
+<form action="/my-handing-form-page" method="post">
+
+
+action attribute: defines the location (URL) where the form's collected data should be sent when it is submitted.
+method attribute: defines which HTTP method to send the data with (usually get or post).
+
+how a label tells what element it is for:
+<label for="my_name">My Label</label>
+<input type="email" name="email_name" id="my_name">
+
+<label for="mail">Email:</label>
+<input type="email" name="user_email" id="mail">
+
+name also
+client-side: tells the browser which name to give each piece of data
+server side: let the server handle each piece of data by name, form is sent to the server as name/value pairs
+
+How to structure a web form
+
+<fieldset> will group a form together
+
+<fieldset>
+    <legend>My Legend</legend>
+    ...
+</fieldset>
+
+for="" tells the element what it should be connected with
+
+Basic native form controls
+https://developer.mozilla.org/en-US/docs/Learn/Forms/Basic_native_form_controls
+
+<input type="the_type" />
+the type="string" will be what changes the form to the element type
+
+Checkbox
+should be surrounded with a <fieldset> to group them together
+
+same with Radio Button, but also remember they are a selection
+
+are the same, however button is easier to style
+
+<input type="submit" value="Submit this form" />
+<input type="reset" value="Reset this form" />
+<input type="button" value="Do Nothing without JavaScript" />
+
+<button type="submit">Submit this form</button>
+<button type="reset">Reset this form</button>
+<button type="button">Do Nothing without JavaScript</button>
+
+File picker
+
+<input type="file" name="file" id="file" accept="image/*" multiple />
+
+The HTML5 input types
+
+Email address field
+<input type="email" id="email" name="email" />
+
+Search field
+<input type="search" id="search" name="search" />
+
+Phone number field
+<input type="tel" id="tel" name="tel" />
+
+URL field
+<input type="url" id="url" name="url" />
+
+Numeric field
+<input type="number" id="number" name="number" />
+<input type="number" name="age" id="age" min="1" max="10" step="2" />
+
+Slider controls
+need to use JavaScript to display the output to the webpage
+
+<label for="price">Choose a maximum house price: </label>
+<input
+  type="range"
+  name="price"
+  id="price"
+  min="50000"
+  max="500000"
+  step="1000"
+  value="250000" />
+<output class="price-output" for="price"></output>
+
+include the output element to provide feedback to the user, a convention to use the word output
+
+const price = document.querySelector("#price");
+const output = document.querySelector(".price-output");
+
+output.textContent = price.value;
+
+price.addEventListener("input", () => {
+  output.textContent = price.value;
+});
+
+Date and time pickers
+reference is here to select the datetimes
+
+https://developer.mozilla.org/en-US/docs/Learn/Forms/HTML5_input_types#date_and_time_pickers
+
+Color picker control
+<input type="color" name="color" id="color" />
+
+Other form controls
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
