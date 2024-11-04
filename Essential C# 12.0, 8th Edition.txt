@@ -1,0 +1,130 @@
+
+https://essentialcsharp.com/home
+
+GitHub
+https://github.com/IntelliTect/EssentialCSharp
+
+
+
+Chapter01
+Introducing C#
+
+can create a program entrily from the CLI
+$ dotnet new console
+$ dotnet run
+
+Understanding a project
+assemblies contain a set of instructions specifying how a program will behave
+
+
+
+Chapter02
+Data Types
+
+nint: native int
+nuint: native uint
+
+Round-trip formatting
+// this will ensure the large number will stay the same
+text = $"{number:R}";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
