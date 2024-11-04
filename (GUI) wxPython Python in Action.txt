@@ -99,6 +99,8 @@ class MyApp(wx.App):
 if your class needs a __init__() need to call it this way
 wx.App.__init__(self)
 
+but will instead use the OnInit()
+
 can call wx.App subclass in main, however it is not recommended to do so
 
 Application object lifecycle
@@ -130,12 +132,80 @@ if __name__ == '__main__':
     app = App(redirect=True, filename='output')
 
 Shutting down a wxPython Application
+Close() on all top-level windows
+
+to allow the program to continue after the last window closes, SetExitOnFrameDelete(flag=False)
+
+if the program shuts down without your control, you have 1 chance to cleanup resources
+your application binds to an event handler for the wx.EVT_QUERY_END_SESSION event, then the event handler is called when wxPython is notified of the shutdown
+event parameter is wx.CloseEvent
+the close event may allow the application to veto the shutdown, use the CanVeto() to find out
+worth doing if you cannot save your resources, if Close() methods return False then the application attempts to veto the shutdown
+
+Top-level window object
+the top-level window object is usually the main window of your applcation and contains widgets and interfact objects, any application that doesn't have a parent container
+can be:
+1.) wx.Frame (the usual case)
+2.) wx.Dialog'
+
+Can set it via:
+SetTopWindow()
+or the first frame in wx.App's top-level window
+
+frame = window
+
+creating subclasses of wx.Frame
+wx.Frame(parent, id=-1, title="", pos=wx.DefaultPosition, size=wx.DefaultSize, style=wx.DEFAULT_FRAME_STYLE, name="frame")
+
+hardcoding values for you frame
+class MyFrame(wx.Frame):
+    def __init__(self):
+        wx.Frame.__init__(self, None, -1, "My Friendly Window", (100, 100), (100, 100))
+
+wxPython IDs
+each widget has a window ID, must be unique within each frame, can resuse IDs between frames
+widget_constructor(parent, id_number)
+create a unique relationship between an event that happens to a specific object and a function called in response to that event
+create an event:
+1.) explicitly pass a positive integer into the widget_constructor
+2.) get wxPython to create an ID using wx.NewID()
+3.) pass either a global constant wx.ID_ANY or -1 to the widget widget_constructor
+
+1.) explicitly pass a positive integer into the widget_constructor
+can ensure that wxPython does not use your explicit ID elsewhere by calling wx.RegisterId()
+
+2.) get wxPython to create an ID using wx.NewID()
+id = wx.NewId()
+frame = wx.Frame.__init__(None, id)
+
+3.) pass either a global constant wx.ID_ANY or -1 to the widget widget_constructor
+wx.ID_ANY
+
+frame = wx.Frame.__init__(None, -1)
+id = frame.GetID()
+
+Some helpers
+point = wx.Point(x_value, y_value)
+
+wx.RealPoint() uses floating-point coordinates
+
+wx.Frame styles
+takes a bitmask
+
+SetStyle() allows you to change the styles after the widget was created
+
+| to use multiple styles
+
+the default
+wx.MAXIMIZE_BOX | wx.MINIMIZE_BOX | wx.RESIZE_BORDER | wx.SYSTEM_MENU | wx.CAPTION | wx.CLOSE_BOX
+
+disable the user from resizing the window
+wx.DEFAULT_FRAME_STYLE ^ (wx.RESIZE_BORDER | wx.MINIMIZE_BOX | wx.MAXIMIZE_BOX)
+
+Adding additional widgets
 
 
-
-
-
-
+Left Off Page 78
 
 
 
